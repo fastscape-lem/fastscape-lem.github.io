@@ -1,0 +1,14 @@
+section {
+  padding: 150px 0;
+}
+
+.jumbotron {
+  background: url(../images/fastscape_header_background_light.jpg) no-repeat center top;
+  background-size: cover;
+  height: 350px;
+}
+
+.vertical-center {
+  display: flex;
+  align-items: center;
+}
