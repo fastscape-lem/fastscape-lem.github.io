@@ -1,18 +1,53 @@
+.vertical-center {
+  display: flex;
+  align-items: center;
+}
+
 footer {
   font-size: 14px;
 }
-
-section {
-  padding: 150px 0;
+.footer-row{
+  margin-bottom: 10px;
+  flex-wrap: nowrap;
 }
+.footer-text{
+  max-width: 630px;
+  flex: 0 1 630px;
+  text-align: justify;
+  margin-right: 20px;
+}
+.footer-link{
+  flex: 1 1 auto;
+  display: block;
+  text-align: right;
+}
+.footer-img{
+  max-width: 120px;
+}
+
+/*section {
+  padding: 150px 0;
+}*/
 
 .jumbotron {
   background: url(../images/fastscape_header_background_light.jpg) no-repeat center top;
   background-size: cover;
-  height: 350px;
+  height: 400px;
 }
 
-.vertical-center {
-  display: flex;
-  align-items: center;
+@media (max-width: 768px){
+  .footer-text{
+    text-align: left;
+    margin-right: 0;
+  }
+  .footer-row{
+    display: block;
+    padding: 0 10px;
+  }
+  .footer-row:first-child{
+    margin-bottom: 30px;
+  }
+  .footer-link{
+    text-align: center;
+  }
 }
