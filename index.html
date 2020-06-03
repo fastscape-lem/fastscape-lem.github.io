@@ -43,10 +43,10 @@
                                 Site
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="#stack">The Fastscape Stack</a>
-                                <a class="dropdown-item" href="#help">Getting help</a>
+                                <a class="dropdown-item" href="#overview">Overview</a>
+                                <a class="dropdown-item" href="#related-projects">Related projects</a>
                                 <a class="dropdown-item" href="#publications">Publications</a>
-                                <a class="dropdown-item" href="#related-tools">Other projects</a>
+                                <a class="dropdown-item" href="#other-tools">Other tools</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
@@ -95,20 +95,35 @@
             </div>
         </div>
 
-        <section id="stack">
+        <div class="container">
+            <div class="row justify-content-md-center">
+                <div class="col-lg-10">
+                    <p class="text-center">
+                        Welcome! This website contains general information about Fastscape. Let's get in touch via
+                        <a class="color-fs-light" href="https://github.com/fastscape-lem">GitHub</a> (technical issues and suggestions),
+                        <a class="color-fs-light" href="https://discourse.fastscape.org">Discourse forum</a> (general discussion and support),
+                        <a class="color-fs-light" href="https://gitter.im/fastscape-lem/lobby">Gitter chat</a> (short questions or random conversation) and
+                        <a class="color-fs-light" href="https://twitter.com/fastscape">Twitter</a> (news).
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <section id="overview">
             <div class="container">
                 <div class="row">
-                    <h2>The Fastscape Stack</h2>
-                    <p>
+                    <div class="col-lg-12">
+                    <h2 class="text-secondary">Overview</h2>
+                    <p style="padding-bottom: 1rem;">
                         Fastscape is a set of open-source software components aimed at making landscape evolution models
                         and topographic analysis algorithms readily accessible to a wide range of users, from experts
                         in landscape evolution modelling to scientists, researchers and teachers in the broader Earth
                         science community.
                     </p>
-                    <p>The main components are:</p>
+                    </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-7">
+                <div class="row ml-3 mr-3">
+                    <div class="col-lg-6">
                         <h4>Fastscape</h4>
                         <p>
                             Fastscape is a flexible and modular landscape evolution model that is
@@ -121,110 +136,138 @@
                         </p>
                         <p>
                             Its high-level, user-friendly interface enables interactive landscape evolution modeling, e.g.,
-                            within Jupyter notebooks.
+                            within <a class="color-fs-light" href="https://jupyter.org">Jupyter</a> notebooks.
                         </p>
                         <a class="btn btn-secondary" href="https://mybinder.org/v2/gh/fastscape-lem/fastscape-demo/master?urlpath=lab">
                             <i class="fa fa-rocket" aria-hidden="true"></i> Try it online!
                         </a>
                         <a class="btn btn-outline-secondary" href="https://fastscape.readthedocs.io/">
-                            <i class="fa fa-question" aria-hidden="true"></i> Documentation
+                            Documentation
                         </a>
                         <a class="btn btn-outline-secondary" href="https://github.com/fastscape-lem/fastscape">
                             <i class="fab fa-github" aria-hidden="true"></i> Source repository
                         </a>
                     </div>
-                    <div class="col-md-5">
-                        <a href="#">
-                            <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
-                        </a>
+                    <div class="col-lg-6">
+                        <img class="img-fluid mb-3 mt-3" src="images/fastscape_notebook.png" alt="">
                     </div>
                 </div>
                 <hr>
-                <div class="row">
-                    <div class="col-md-7">
+                <div class="row ml-3 mr-3">
+                    <div class="col-lg-5">
+                        <a href="#">
+                            <img class="img-fluid rounded mb-3 mb-md-0" src="images/fastscape_marine_3d.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-lg-7">
                         <h4>Fastscapelib (Fortran)</h4>
                         <p>
                             Fastscapelib-Fortran implements efficient algorithms for landscape evolution modeling.
                         </p>
                         <p>
-                            It provides a basic Fortran interface with setup, time-step execution and i/o routines that
+                            It provides a basic Fortran interface with model setup, runtime and I/O routines that
                             can be used in standalone programs or for coupling landscape evolution models with other
                             Fortran codes (e.g., tectonic or climate models).
                         </p>
                         <p>
-                            It can also be built as a Python extension with a Numpy-compatible, low-level interface. It is
+                            It may also be built as a Python extension with a NumPy-compatible, low-level API. It is
                             currently used as a core backend library in "Fastscape".
                         </p>
                         <a class="btn btn-outline-secondary" href="https://fastscape-lem.github.io/fastscapelib-fortran/">
-                            <i class="fa fa-question" aria-hidden="true"></i> Documentation
+                            Documentation
                         </a>
                         <a class="btn btn-outline-secondary" href="https://github.com/fastscape-lem/fastscapelib-fortran">
                             <i class="fab fa-github" aria-hidden="true"></i> Source repository
                         </a>
                     </div>
-                    <div class="col-md-5">
-                        <a href="#">
-                            <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
-                        </a>
-                    </div>
                 </div>
                 <hr>
-                <div class="row">
-                    <div class="col-md-7">
+                <div class="row ml-3 mr-3">
+                    <div class="col-lg-12">
                         <h4>Fastscapelib (C++)</h4>
                         <p>
-                            Fastscapelib (C++) implements efficient algorithms for landscape evolution modeling.
+                            Fastscapelib (C++) is the successor of Fastscapelib-Fortran (it is still in early development).
                         </p>
                         <p>
-                            It uses the Xtensor library
+                            It aims to provide a flexible, yet optimized system for implementing various core algorithms (e.g., flow routing and enforcement,
+                            solvers for erosion processes) on multiple grids.
                         </p>
                         <p>
-                            It c
+                            It exposes a C++ API that is compatible with the <a class="color-fs-light" href="https://xtensor.readthedocs.io">Xtensor</a> library
+                            (i.e., a multi-dimensional array library heavily inspired by NumPy). Thanks to Xtensor, it also exposes a Python/NumPy API and may
+                            have language bindings for R and Julia.
                         </p>
                         <a class="btn btn-outline-secondary" href="https://fastscapelib.readthedocs.io/en/latest/">
-                            <i class="fa fa-question" aria-hidden="true"></i> Documentation
+                            Documentation
                         </a>
                         <a class="btn btn-outline-secondary" href="https://github.com/fastscape-lem/fastscapelib">
                             <i class="fab fa-github" aria-hidden="true"></i> Source repository
                         </a>
                     </div>
-                    <div class="col-md-5">
-                        <a href="#">
-                            <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
-                        </a>
-                    </div>
                 </div>
                 <hr>
-                <div class="row">
-                    <div class="col-md-7">
+                <div class="row ml-3 mr-3">
+                    <div class="col-md-6">
+                        <a href="#">
+                            <img class="img-fluid mb-3 mt-3" src="images/xarray-simlab-graph.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-6">
                         <h4>Xarray-simlab</h4>
                         <p>
-                            Modeling framwork.
+                            Xarray-simlab is a modeling framework used by "Fastscape" to build, setup and run custom models.
                         </p>
                         <p>
+                            It is very well integrated with tools of the Python Scientific / PyData / <a class="color-fs-light" href="https://pangeo.io">Pangeo</a> ecosystems such as
+                            <a class="color-fs-light" href="https://xarray.pydata.org">Xarray</a>,
+                            <a class="color-fs-light" href="https://dask.org/">Dask</a>,
+                            <a class="color-fs-light" href="https://zarr.readthedocs.io">Zarr</a> and the
+                            <a class="color-fs-light" href="https://holoviz.org">Holoviz projects</a>.
                         </p>
                         <p>
+                            It is a generic framework that can be used to build models in a wide range of domains.
                         </p>
                         <a class="btn btn-outline-secondary" href="https://xarray-simlab.readthedocs.io">
-                            <i class="fa fa-question" aria-hidden="true"></i> Documentation
+                            Documentation
                         </a>
                         <a class="btn btn-outline-secondary" href="https://github.com/benbovy/xarray-simlab">
                             <i class="fab fa-github" aria-hidden="true"></i> Source repository
-                        </a>
-                    </div>
-                    <div class="col-md-5">
-                        <a href="#">
-                            <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
                         </a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="help">
+        <section id="related-projects">
             <div class="container">
                 <div class="row">
-                    <h2>Getting help</h2>
+                    <div class="col-lg-12">
+                        <h2 class="text-secondary">Related projects</h2>
+                        <p style="padding-bottom: 1rem;">A gallery of extensions and applications built on top of Fastscape.</p>
+                    </div>
+                </div>
+                <div class="row ml-3 mr-3">
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card h-100">
+                            <img class="card-img-top" src="images/gilbert-board.png" alt="">
+                            <div class="card-body">
+                                <h4 class="card-title">Gilbert Board</h4>
+                                <p class="card-text">
+                                    A variant of the Galton Board build with Fastscape, <a class="color-fs-light" href="https://ipycanvas.readthedocs.io">Ipycanvas</a>, and
+                                    <a class="color-fs-light", href="https://ipywidgets.readthedocs.io">Ipywidgets</a>. It shows how to control Fastscape's model execution
+                                    in real-time using widgets.
+                                </p>
+                            </div>
+                            <div class="card-footer">
+                                <a class="btn btn-sm btn-secondary" href="https://mybinder.org/v2/gh/fastscape-lem/gilbert-board/master?urlpath=%2Fvoila%2Frender%2Fgilbert_board.ipynb">
+                                    <i class="fa fa-rocket" aria-hidden="true"></i> Try it online!
+                                </a>
+                                <a class="btn btn-sm btn-outline-secondary" href="https://github.com/fastscape-lem/gilbert-board">
+                                    <i class="fab fa-github" aria-hidden="true"></i> Source repository
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -232,15 +275,20 @@
         <section id="publications">
             <div class="container">
                 <div class="row">
-                    <h2>Publications</h2>
+                    <div class="col-lg-12">
+                        <h2 class="text-secondary">Publications</h2>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="related-tools">
+        <section id="other-tools">
             <div class="container">
                 <div class="row">
-                    <h2>Tools</h2>
+                    <div class="col-lg-12">
+                        <h2 class="text-secondary">Some other tools</h2>
+                        <p>A few other, publicly available tools for topographic analysis and landscape evolution modeling:</p>
+                    </div>
                 </div>
             </div>
         </section>

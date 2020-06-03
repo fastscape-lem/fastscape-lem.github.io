@@ -25,9 +25,16 @@ footer {
   max-width: 120px;
 }
 
-/*section {
-  padding: 150px 0;
-}*/
+.color-fs-light {
+  color: #be9063 !important
+}
+.color-fs-light:hover {
+  color: #9e7043 !important
+}
+
+section {
+  margin-top: 7rem;
+}
 
 .jumbotron {
   background: url(../images/fastscape_header_background_light.jpg) no-repeat center top;
