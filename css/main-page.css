@@ -42,6 +42,10 @@ section {
   height: 400px;
 }
 
+.li-space > li {
+  margin-bottom: 1rem;
+}
+
 @media (max-width: 768px){
   .footer-text{
     text-align: left;
