@@ -182,10 +182,10 @@
                     <div class="col-lg-12">
                         <h4>Fastscapelib (C++)</h4>
                         <p>
-                            Fastscapelib (C++) is the successor of Fastscapelib-Fortran (it is still in early development).
+                            Fastscapelib (C++) is the successor of Fastscapelib-Fortran.
                         </p>
                         <p>
-                            It aims to provide a flexible, yet optimized system for implementing various core algorithms (e.g., flow routing and enforcement,
+                            It aims to provide a very flexible, yet optimized system for implementing various core algorithms (e.g., flow routing and enforcement,
                             solvers for erosion processes) on multiple grids.
                         </p>
                         <p>
@@ -231,33 +231,6 @@
                         </a>
                     </div>
                 </div>
-                <hr>
-                <div class="row ml-3 mr-3">
-                    <div class="col-lg-6">
-                        <h4>Ipyfastscape</h4>
-                        <p>
-                            Ipyfastscape provides interactive widgets for topographic data analysis and modelling in
-                            <a class="color-fs-light" href="https://jupyter.org">Jupyter</a> notebooks.
-                        </p>
-                        <p>
-                            While ipyfastscape is tightly integrated with fastscape, it also integrates very well with any data in the
-                            form of an xarray dataset or any model created with xarray-simlab.
-                        </p>
-                        <p>
-                            Ipyfastscape's high-level UI components can be reused for building interactive web applications (dashboards). It's
-                            very useful for research communication, teaching and outreach.
-                        </p>
-                        <a class="btn btn-secondary" href="https://mybinder.org/v2/gh/fastscape-lem/fastscape-demo/master?urlpath=lab/tree/ipyfastscape">
-                            <i class="fa fa-rocket" aria-hidden="true"></i> Try it online!
-                        </a>
-                        <a class="btn btn-outline-secondary" href="https://github.com/fastscape-lem/ipyfastscape">
-                            <i class="fab fa-github" aria-hidden="true"></i> Source repository
-                        </a>
-                    </div>
-                    <div class="col-lg-6">
-                        <img class="img-fluid mb-3 mt-3" src="images/ipyfastscape.png" alt="">
-                    </div>
-                </div>
             </div>
         </section>
 
@@ -271,6 +244,37 @@
                 </div>
                 <div class="row ml-3 mr-3">
                     <div class="col-lg-4 col-md-6 mb-4">
+			<div class="card h-100">
+                            <img class="card-img-top" src="images/ipyfastscape.png" alt="">
+                            <div class="card-body">
+                                <h4 class="card-title">Ipyfastscape</h4>
+                                <p class="card-text">
+                                    Ipyfastscape provides interactive widgets for topographic data analysis and modelling in
+                                    <a class="color-fs-light" href="https://jupyter.org">Jupyter</a> notebooks.
+                                </p>
+                            </div>
+                            <div class="card-footer">
+                                <a class="btn btn-sm btn-secondary" href="https://mybinder.org/v2/gh/fastscape-lem/fastscape-demo/master?urlpath=lab/tree/ipyfastscape">
+                                    <i class="fa fa-rocket" aria-hidden="true"></i> Try it online!
+                                </a>
+                                <a class="btn btn-sm btn-outline-secondary" href="https://github.com/fastscape-lem/ipyfastscape">
+                                    <i class="fab fa-github" aria-hidden="true"></i> Source repository
+                                </a>
+                            </div>
+                        </div>
+			<div class="card h-100">
+                            <div class="card-body">
+                                <h4 class="card-title">AdaScape</h4>
+                                <p class="card-text">
+                                    The AdaScape package contains a simple adaptive speciation (life evolution) model written in Python that can be easily coupled with Fastscape.
+                                </p>
+                            </div>
+                            <div class="card-footer">
+                                <a class="btn btn-sm btn-outline-secondary" href="https://github.com/fastscape-lem/adascape">
+                                    <i class="fab fa-github" aria-hidden="true"></i> Source repository
+                                </a>
+                            </div>
+                        </div>
                         <div class="card h-100">
                             <img class="card-img-top" src="images/gilbert-board.png" alt="">
                             <div class="card-body">
@@ -302,7 +306,7 @@
                         <h2 class="text-secondary">Publications</h2>
                         <p>
 			    For a complete list of publications, please check the Fastscape entry on the
-			    <a href="https://helmholtz.software/software/fastscape-toolbox">Helmholtz Research Software Directory</a>.
+			    <a class="color-fs-light" href="https://helmholtz.software/software/fastscape-toolbox">Helmholtz Research Software Directory</a>.
 			</p>
                     </div>
                 </div>
@@ -350,7 +354,7 @@
                 </a>
             </div>
             <div class="row footer-row">
-                <p>&copy; 2020 Fastscape developers</p>
+                <p>&copy; 2020-2023 Fastscape developers</p>
             </div>
         </footer>
 
